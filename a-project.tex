@@ -1,0 +1,229 @@
+% a-project.tex, v-1.0.3 marcoreis baseado no
+% abntex2-modelo-trabalho-academico.tex, v-1.9.7 laurocesar
+% Copyright 2012-2018 by abnTeX2 group at http://www.abntex.net.br/ 
+% 
+% This work consists of the files ........
+% 
+% -----------------------------------------------------------------------------
+% Modelo para desenvolvimento de documentação de projetos acadêmicos
+% (tese de doutorado, dissertação de mestrado e trabalhos de monografias em geral) 
+% em conformidade com ABNT NBR 14724:2011: Informação e documentação. 
+% -----------------------------------------------------------------------------
+% Opções para a documentação
+%
+% Fancy page headings 
+%\documentclass[fancyheadings, subook]{Classes/a-prj}
+%\documentclass[fancyheadings, sureport]{Classes/a-prj}
+%
+% Fancy chapters and sections headings 
+%\documentclass[fancychapter, subook]{Classes/a-prj}
+%\documentclass[fancychapter, sureport]{Classes/a-prj}
+%
+% Fancy page , chapters and sections headings
+%\documentclass[fancyheadings, fancychapter, subook]{Classes/a-prj}
+\documentclass[fancyheadings, fancychapter, sureport]{Classes/a-prj}
+%
+% -----------------------------------------------------------------------------
+% Alguns comandos para a fancy page headings)
+%
+% Page header line width
+%\footlinewidth{value}
+%
+% Page footer line width
+%\headlinewidth{value}
+%
+% Page header and footer line width
+%\headingslinewidth{value}
+%
+% Page header and footer lines without text
+%\headingslinesonly
+%
+% The default line width is 0.3pt.
+% Set the value to 0pt to remove the page header and/or footer line
+%
+% -------------------------------------------------------------------------------
+% Formato de figuras suportado
+% -------------------------------------------------------------------------------
+% O formato das figuras depende da forma como o arquivo de saída é gerado.
+% As figuras inseridas na pasta Figures serão automaticamente reconhecidas sem
+% a necessidade de inserir a extensão do arquivo.
+%
+% O pdfLaTEX (PDF) suporta figuras com as extensões: pdf, jpg, png e mps.
+%
+% -------------------------------------------------------------------------------
+% Árvore do diretório a-project.tex
+%  Diretório
+%       \Classes        (requerido)
+%       \Figures        (requerido) --------------------------------->
+%       \Figures\PDF    (optional)
+%       \Figures\JPG    (optional) Figures located within these
+%       \Figures\PNG    (optional) folders are searched automatically
+%       \Figures\MPS    (optional)  by the a-prj class.
+%       \Figures\EPS    (optional)
+%       \Figures\PS     (optional) <--------------------------------
+%       \Tables         (requerido)
+%       \Others         (requerido)
+%       \Chapters       (requerido)
+%       \Appendices     (optional)
+%       \References     (requerido)
+%
+% -------------------------------------------------------------------------------
+% PDF File resumo
+\ifpdf
+    \hypersetup{
+    	backref,
+        colorlinks  = true,
+        pdftitle    = Modelo de documentação,
+        pdfauthor   = {Marco Reis, marco.a.reis@gmail.com},
+        pdfsubject  = Mestre em Engenharia,
+        pdfcreator  = Subtitulo,
+        pdfproducer = PDFLatex,
+        pdfkeywords = {documentação, latex, dissertação, tese}}
+ \fi
+%
+% -------------------------------------------------------------------------------
+% Relação de pacotes opcionais utilizados
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{longtable}
+\usepackage{dcolumn}
+\usepackage{multirow}
+\usepackage{lscape}
+%\usepackage{graphicx}
+\usepackage{rotating}
+%\usepackage{float,subfigure}
+%\usepackage{graphicx, subfigure}
+\usepackage{cite}
+\usepackage[left=3cm,top=3cm,right=2cm,bottom=2cm]{geometry}
+\usepackage[alf]{abntex2cite}
+\usepackage{ifpdf}
+\usepackage{shadow}
+\usepackage{wrapfig}
+\usepackage[normalem]{ulem}
+\usepackage{makeidx}
+\usepackage{yfonts}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{indentfirst}
+\usepackage{color}
+\usepackage{microtype}
+\usepackage{lipsum}
+\usepackage{caption}
+\usepackage{subcaption}
+%
+\makeindex 
+\setlength{\LTcapwidth}{\textwidth}
+%
+\newtheorem{theorem}{Teorema}
+\newtheorem{definition}[theorem]{Definição}
+%
+% -------------------------------------------------------------------------------
+% Configurações do pacote backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi
+}
+% 
+% -------------------------------------------------------------------------------
+% Início do documento raiz
+\begin{document}
+% Definição do título da página
+    \university{Centro Universitário SENAI CIMATEC}
+	%\faculty{Programa de...}
+	%\school{Escola de...}
+% 
+    %\course{Engenharia Elétrica}
+    \typework{Fundamentos de Robótica Móvel}
+% 
+	%\course{Mestrado em Modelagem Computacional e Tecnologia Industrial}
+	%\typework{Disserta\c{c}\~ao de mestrado}
+	%\typework{Exame de Qualificação de Mestrado}
+% 
+	%\course{Engenharia Elétrica}
+	%\typework{Tese de doutorado}
+	%\typework{Exame de Qualificação de doutorado}
+%
+% -------------------------------------------------------------------------------
+% Informações gerais
+    \thesistitle{Desenvolvimento do robô móvel.}
+    \hidevolume
+    \thesisvolume{Volume 1 of 1}
+    \thesisauthor{Michael Faraday}
+    \thesisauthorr{John Nash}
+    \thesisauthorrr{James Clerk Maxwell}
+    \thesisauthorrrr{Nikola Tesla}
+    \thesisauthorrrrr{Sir Isaac Newton}
+    %\thesisadvisor{Prof. Marco Reis, M.Eng.}
+    %\hidecoadvisor
+    %\thesiscoadvisor{Marco Reis}
+    \thesisdegreetitle{Bacharel em Engenharia}
+    \thesismonthyear{Agosto de 2020}
+% 
+    \maketitlepage
+%
+% ----------------------------------------------------------------------------
+% Inserir Folha de rosto, Nota de estilo, folha de assinaturas, dedicatoria
+    \include{Others/FolhaRosto}
+    %\include{Others/NotaEstilo}
+    %\include{Others/FolhaAssinaturas}
+    %\include{Others/dedicatoria}
+    %\include{Others/agradecimentos}
+%
+% ----------------------------------------------------------------------------
+% Resumo/abstract, sumário e siglas
+    \begin{romanpagenumbers}
+        \include{Others/resumo}
+        \include{Others/abstract}
+        % Make list of contents, tables and figures
+        \thesiscontents
+        %Include other required section
+        \include{Others/abbreviation}
+        \include{Others/simbolos}
+        %Switch the page numbering back to the default format
+    \end{romanpagenumbers}
+%
+% ---------------------------------------------------------------------------
+% Include thesis chapters
+    \parskip=\baselineskip
+    \include{Chapters/introducao}
+    \include{Chapters/fundamentos}
+    \include{Chapters/metodos}
+    \include{Chapters/resultados}
+    \include{Chapters/conclusao}
+    % include more chapters ...
+%
+% ----------------------------------------------------------------------------
+% Include thesis appendices
+    \begin{thesisappendices}
+        \include{Appendices/diagmec}
+        \include{Appendices/diagele}
+        \include{Appendices/logbook}
+    \end{thesisappendices}
+%
+% ----------------------------------------------------------------------------
+% Configurar as referencias bibliograficas
+	\renewcommand\bibname{Referências}
+    \addcontentsline{toc}{chapter}{Referências}
+    \bibliography{References/referencias}
+%
+% ----------------------------------------------------------------------------
+% Finishing him
+    \include{Others/ultimafolha}
+\end{document}
+%
+% -------------------------------------------------------------------------------
+% Aqui termina a formatação para o documento.
+% In God We Trust. All Other Bring Data. 
+%
+% -------------------------------------------------------------------------------
