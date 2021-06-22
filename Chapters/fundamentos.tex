@@ -6,6 +6,7 @@
 \section{Descrição}
  O Walker é um robô bípede, ou seja, um robô que se desloca sobre dois pés. Este robô deve ser capaz de se locomover e desviar de obstáculos em um determinado ambiente. Além disso, o Walker deve realizar um desafio, que consiste em navegar de forma autônoma, se localizar por meio de tags e encontrar um determinado objeto.
 
+%conferir se precisa de requisitos do cliente
 \subsection{Requisitos do cliente}
  O cliente definiu certos requisitos quanto à operação e  às características do robô:
  \begin{itemize}
@@ -15,20 +16,24 @@
     \item Ser capaz de desviar de obstáculos;
  \end{itemize}
 \subsection{Arquitetura Geral}
- A arquitetura geral, apresentada na Figura X, relaciona de modo geral a interface do usuário, com a central de gerenciamento do sistema e com a interface com hardware.
- 
+ A arquitetura geral, apresentada na Figura \ref{fig:Arquitetura geral}, relaciona de modo geral a interface do usuário, com a central de gerenciamento do sistema e com a interface com hardware. Neste contexto, a interface do usuário representa o contato direto com o usuário por meio de um botão \textit{on/off}, um \textit{joystick} e por acesso remoto, através de um computador devidamente conectado.
+
+ \begin{figure} [h!]	
+    \centering
+
+    \caption{Arquitetura Geral}
+    \includegraphics[width=0.8\textwidth]{general_architecture}
+    \caption*{Fonte: Autoria própria.}
+    \label{fig:Arquitetura geral}
+\end{figure}	
+
+Para a central de gerenciamento do sistema utilizou-se o sistema operacional \textit{Ubuntu} 20.04 junto ao framework de robótica ROS \textit{Noetic}. Neste cojunto se encontram as principais funcionalidades do robô: percepção, navegação, detecção e controle. Por fim, no conjunto de saídas estão os atuadores e os alertas sonoro e luminoso.
 
 \subsection{Requisitos técnicos}
-\label{sec:sota}
-\lipsum[1]
 
-%---------------picture------------------------------------
-\begin{figure} [h!]												 
-	\centering													 
-	\includegraphics[width=0.6\textwidth]{./lq}				 
-	\caption{Insufficient data.}		
-	\label{img:ihuma}												 
-\end{figure}													 
+%desdobramento da função qualidade
+\subsection{Quality Function Deployment}
+
 %----------------------------------------------------------
 
 %--------- NEW SECTION ----------------------
