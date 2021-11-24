@@ -1,5 +1,5 @@
-# academic-projects
-This repository provides a model document for the delivery of activities carried out during discipline of "Fundamentos de Robótica Móvel".
+# academic-report
+This repository provides a model document (**report**) for the delivery of activities carried out during the development of an academic project.
 
 
 The good presentation doc must have:
