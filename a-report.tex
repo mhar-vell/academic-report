@@ -21,7 +21,7 @@
 %
 % Fancy page , chapters and sections headings
 %\documentclass[fancyheadings, fancychapter, subook]{Classes/a-prj}
-\documentclass[fancyheadings, fancychapter, sureport]{Classes/a-prj}
+\documentclass[fancyheadings, fancychapter, sureport]{Classes/a-report}
 %
 % -----------------------------------------------------------------------------
 % Alguns comandos para a fancy page headings)
@@ -144,7 +144,7 @@
 	%\school{Escola de...}
 % 
     %\course{Engenharia Elétrica}
-    \typework{Relatório do Projeto Walker}
+    \typework{Relatório Final}
 % 
 	%\course{Mestrado em Modelagem Computacional e Tecnologia Industrial}
 	%\typework{Disserta\c{c}\~ao de mestrado}
@@ -156,16 +156,14 @@
 %
 % -------------------------------------------------------------------------------
 % Informações gerais
-    \thesistitle{Walker: um robô bípede}
+    \thesistitle{Rennur: a funcionalidade replicante em sistemas robóticos}
     \hidevolume
     \thesisvolume{Volume 1 of 1}
-    \thesisauthor{Brenda Alencar}
-    \thesisauthorr{Felipe Mohr}
-
+    \thesisauthor{Maeve Millay}
+    \thesisauthorr{Rick Deckard}
     \thesisadvisor{Prof. Marco Reis, M.Eng.}
     %\hidecoadvisor
     %\thesiscoadvisor{Marco Reis}
-    \thesisdegreetitle{Bacharel em Engenharia}
     \thesismonthyear{Agosto de 2020}
 % 
     \maketitlepage
@@ -185,6 +183,8 @@
         \include{Others/abstract}
         % Make list of contents, tables and figures
         \thesiscontents
+        \pdfbookmark[1]{Lista de Tabelas}{lot} \listoftables
+        \newpage
         %Include other required section
         %\include{Others/abbreviation}
         %\include{Others/simbolos}
@@ -206,7 +206,7 @@
     \begin{thesisappendices}
         \include{Appendices/diagmec}
         \include{Appendices/diagele}
-        \include{Appendices/logbook}
+        %\include{Appendices/logbook}
     \end{thesisappendices}
 %
 % ----------------------------------------------------------------------------

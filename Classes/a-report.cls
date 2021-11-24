@@ -31,15 +31,14 @@
 % }
 %======================== initial code ==================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{Classes/a-prj}[2017/10/31 v1.0.5]
+\ProvidesClass{Classes/a-report}[2017/10/31 v1.0.5]
 \typeout{------------------------------------------------------------}
 \typeout{Esta classe LaTeX está de acordo com os requerimentos do    }
-\typeout{do professor Marco Reis para desenvolvimento de documentação}
-\typeout{de projetos acadêmicos: teses, dissertações e trabalhos     }
-\typeout{de conclusão de cursos.                                     }
+\typeout{do professor Marco Reis para desenvolvimento de relatórios  }
+\typeout{de projetos acadêmicos.                                     }
 \typeout{------------------------------------------------------------}
 %------------------------------------------------------------------------
-%Define extra packages required by a-prj class
+%Define extra packages required by a-report class
 %------------------------------------------------------------------------
 \RequirePackage{ifthen}
 \RequirePackage{setspace}
@@ -126,23 +125,23 @@
 %------------------------------------------------------------------------
 \typeout{---------------------------------------------------------}
 \ifsu@sureport
-    \typeout{a-prj usará a classe de documento -> report.}
+    \typeout{a-report usará a classe de documento -> report.}
     \ifx\pdfoutput\undefined
-        \typeout{a-prj gerará um arquivo DVI.}
+        \typeout{a-report gerará um arquivo DVI.}
         \LoadClass[11pt, a4paper, oneside]{report}
     \else
-        \typeout{a-prj gerará um arquivo PDF.}
+        \typeout{a-report gerará um arquivo PDF.}
              \LoadClass[pdftex, 11pt, a4paper, oneside]{report}
     \fi
     \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
 \else
-    \typeout{a-prj usará a classe de documento -> book.}
+    \typeout{a-report usará a classe de documento -> book.}
     \ifx\pdfoutput\undefined
-        \typeout{a-prj gerará um arquivo DVI.}
+        \typeout{a-report gerará um arquivo DVI.}
         \LoadClass[11pt, a4paper, oneside]{book}
     \else
              % ALTEREI O TAMANHO PARA 12PT
-        \typeout{a-prj gerará um arquivo PDF.}
+        \typeout{a-report gerará um arquivo PDF.}
         \LoadClass[pdftex, 12pt, a4paper, oneside]{book}
     \fi
     \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
@@ -492,7 +491,7 @@
         \LARGE\bfseries{\@thesistitle} \Large \par
         \vspace*{5mm}
         \@thesissubtitle \par
-        \vspace*{25mm}
+        \vspace*{55mm}
         \mdseries
         \if@usvolume
             \@thesisvolume \par
@@ -504,14 +503,14 @@
         \hspace*{57mm} \@thesisauthorr \\
         \hspace*{57mm} \@thesisauthorrr \\
         \hspace*{57mm} \@thesisauthorrrr \\ 
-         \hspace*{57mm} \@thesisauthorrrrr \\ \par
-        \vspace*{15mm}
-         \hspace*{5mm} Orientador: \hspace*{23mm} \@thesisadvisor \par
+        \hspace*{57mm} \@thesisauthorrrrr \\ \par
+        \vspace*{5mm}
+        \hspace*{5mm} Orientado por: \hspace*{16mm} \@thesisadvisor \par
         %  \if@coadvisor
         %      \hspace*{5mm} Co-orientador: \hspace*{17mm} \@thesiscoadvisor \par
         %      \vspace*{10mm}
         %  \fi
-        \vspace*{30mm}
+        \vspace*{20mm}
         \begin{center}
         	\@thesismonthyear \par
         \end{center}	
@@ -690,13 +689,13 @@
     \ifpdf
         \pdfbookmark[1]{Sumário}{toc} \tableofcontents
         \newpage
-        \pdfbookmark[1]{Lista de Tabelas}{lot}\listoftables
-        \newpage
+        %\pdfbookmark[1]{Lista de Tabelas}{lot} \listoftables
+        %\newpage
         \pdfbookmark[1]{Lista de Figuras}{lof} \listoffigures
         \newpage
     \else
         \tableofcontents
-        \listoftables
+        %\listoftables
         \listoffigures
     \fi
 }
