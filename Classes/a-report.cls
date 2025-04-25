@@ -476,7 +476,7 @@
     \vspace*{10mm}
 
     \begin{center}
-        \includegraphics[scale=.1]{positivo_univer_logo} \par
+        \includegraphics[scale=0.15]{logo-cruzeiro-do-sul-512} \par
         \large\bfseries{\MakeUppercase{\@university}}\par
         \doublespacing
         \vspace*{3mm}
@@ -484,7 +484,7 @@
 %        \Large\@school \par
 %        \vspace*{50mm}
         \large\@course \par
-        \vspace*{20mm}
+        \vspace*{18mm}
         \Large\@typework \par
         \vspace*{10mm}
         \singlespacing
