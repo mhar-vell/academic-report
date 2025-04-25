@@ -476,7 +476,7 @@
     \vspace*{10mm}
 
     \begin{center}
-        \includegraphics[scale=.1]{logo-senai-cimatec} \par
+        \includegraphics[scale=.1]{positivo_univer_logo} \par
         \large\bfseries{\MakeUppercase{\@university}}\par
         \doublespacing
         \vspace*{3mm}
