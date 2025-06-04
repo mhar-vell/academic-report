@@ -1,4 +1,4 @@
-\chapter{Conceito do projeto}
+\chapter{Conceito do projeto do portfólio}
 \label{chap:fundteor}
 %--------- NEW SECTION ----------------------
 Os robôs móveis têm a capacidade de se moverem sem a assistência de um operador humano. Os mesmos podem ser classificados,quanto ao sistema de locomoção, como terrestres, aquáticos e aéreos. Os terrestres são subdivididos em robôs que possuem rodas, pernas (bípedes) ou esteiras (ref:Review ArticleA review of mobile robots:). Cada um desses métodos possuem características especifícas quanto ao movimento a ser realizado. Os bípedes, por exemplo, simulam um caminhar antropomórfico, semelhante aos humanos.
@@ -6,7 +6,12 @@ Os robôs móveis têm a capacidade de se moverem sem a assistência de um opera
 % <| |>
 % ===
 
-
+Lista dos documentos
+\begin{enumerate}
+   \item diagrama de classe
+   \item diagrama de casos de uso
+   \item diagrama de sequência
+\end{enumerate}
 
 O desenvolvimento deste projeto consiste em produzir um robô que possa caminhar sobre duas pernas. Além disso, o walker deve se locomover de forma autonôma a fim de realizar uma dada missão.
 
@@ -24,97 +29,102 @@ Neste capítulo serão abordados os requisitos do cliente, os requisistos técni
     \item Ser capaz de desviar de obstáculos;
  \end{itemize}
 
- \section{Requisitos técnicos}
+ \section{Requisitos funcionais}
 
 \lipsum[2-4]
 
- \section{Missão}
- \lipsum
- %desenvolver mais
- Além disso, o Walker deve realizar um desafio, que consiste em navegar de forma autônoma, se localizar por meio de tags e encontrar um determinado objeto.
- \section{Pesquisa por similares}
-%----------------------------------------------------------
-
-%--------- NEW SECTION ----------------------
+%  \section{Missão}
+%  \lipsum
+%  %desenvolver mais
+%  Além disso, o Walker deve realizar um desafio, que consiste em navegar de forma autônoma, se localizar por meio de tags e encontrar um determinado objeto.
 
 
-%---------------picture------------------------------------
-% \begin{figure}
-%     \centering
-%     \subfigure[Figure A]{\label{fig:a}\includegraphics[width=60mm]{./lq}}
-%     \subfigure[Figure B]{\label{fig:b}\includegraphics[width=60mm]{./lq}}
-%     \subfigure[Figure C]{\label{fig:c}\includegraphics[width=\textwidth]{./lq}}
-%     \caption{Three simple graphs}
-%     \label{fig:three graphs}
-% \end{figure}
-%----------------------------------------------------------
 
-% \begin{figure}
-%     \centering
-%     \begin{subfigure}[b]{0.3\textwidth}
-%         \centering
-%         \includegraphics[width=\textwidth]{./lq}
-%         \caption{$y=x$}
-%         \label{fig:y equals x}
-%     \end{subfigure}
-%     \hfill
-%     \begin{subfigure}[b]{0.3\textwidth}
-%         \centering
-%         \includegraphics[width=\textwidth]{./lq}
-%         \caption{$y=3sinx$}
-%         \label{fig:three sin x}
-%     \end{subfigure}
-%     \hfill
-%     \begin{subfigure}[b]{0.3\textwidth}
-%         \centering
-%         \includegraphics[width=\textwidth]{./lq}
-%         \caption{$y=5/x$}
-%         \label{fig:five over x}
-%     \end{subfigure}
-%        \caption{Three simple graphs}
-%        \label{fig:three graphs}
-% \end{figure}
+%  \section{Pesquisa por similares}
 
+
+% %----------------------------------------------------------
 
 % %--------- NEW SECTION ----------------------
-% \section{Assunto 2}
-% \label{sec:ass2}
-% flkjasdlkfjasdlkfjs
 
-% \begin{table}[h]
-%     \begin{subtable}[h]{0.45\textwidth}
-%         \centering
-%         \begin{tabular}{l | l | l}
-%         Day & Max Temp & Min Temp \\
-%         \hline \hline
-%         Mon & 20 & 13\\
-%         Tue & 22 & 14\\
-%         Wed & 23 & 12\\
-%         Thurs & 25 & 13\\
-%         Fri & 18 & 7\\
-%         Sat & 15 & 13\\
-%         Sun & 20 & 13
-%        \end{tabular}
-%        \caption{First Week}
-%        \label{tab:week1}
-%     \end{subtable}
-%     \hfill
-%     \begin{subtable}[h]{0.45\textwidth}
-%         \centering
-%         \begin{tabular}{l | l | l}
-%         Day & Max Temp & Min Temp \\
-%         \hline \hline
-%         Mon & 17 & 11\\
-%         Tue & 16 & 10\\
-%         Wed & 14 & 8\\
-%         Thurs & 12 & 5\\
-%         Fri & 15 & 7\\
-%         Sat & 16 & 12\\
-%         Sun & 15 & 9
-%         \end{tabular}
-%         \caption{Second Week}
-%         \label{tab:week2}
-%      \end{subtable}
-%      \caption{Max and min temps recorded in the first two weeks of July}
-%      \label{tab:temps}
-% \end{table}
+
+% %---------------picture------------------------------------
+% % \begin{figure}
+% %     \centering
+% %     \subfigure[Figure A]{\label{fig:a}\includegraphics[width=60mm]{./lq}}
+% %     \subfigure[Figure B]{\label{fig:b}\includegraphics[width=60mm]{./lq}}
+% %     \subfigure[Figure C]{\label{fig:c}\includegraphics[width=\textwidth]{./lq}}
+% %     \caption{Three simple graphs}
+% %     \label{fig:three graphs}
+% % \end{figure}
+% %----------------------------------------------------------
+
+% % \begin{figure}
+% %     \centering
+% %     \begin{subfigure}[b]{0.3\textwidth}
+% %         \centering
+% %         \includegraphics[width=\textwidth]{./lq}
+% %         \caption{$y=x$}
+% %         \label{fig:y equals x}
+% %     \end{subfigure}
+% %     \hfill
+% %     \begin{subfigure}[b]{0.3\textwidth}
+% %         \centering
+% %         \includegraphics[width=\textwidth]{./lq}
+% %         \caption{$y=3sinx$}
+% %         \label{fig:three sin x}
+% %     \end{subfigure}
+% %     \hfill
+% %     \begin{subfigure}[b]{0.3\textwidth}
+% %         \centering
+% %         \includegraphics[width=\textwidth]{./lq}
+% %         \caption{$y=5/x$}
+% %         \label{fig:five over x}
+% %     \end{subfigure}
+% %        \caption{Three simple graphs}
+% %        \label{fig:three graphs}
+% % \end{figure}
+
+
+% % %--------- NEW SECTION ----------------------
+% % \section{Assunto 2}
+% % \label{sec:ass2}
+% % flkjasdlkfjasdlkfjs
+
+% % \begin{table}[h]
+% %     \begin{subtable}[h]{0.45\textwidth}
+% %         \centering
+% %         \begin{tabular}{l | l | l}
+% %         Day & Max Temp & Min Temp \\
+% %         \hline \hline
+% %         Mon & 20 & 13\\
+% %         Tue & 22 & 14\\
+% %         Wed & 23 & 12\\
+% %         Thurs & 25 & 13\\
+% %         Fri & 18 & 7\\
+% %         Sat & 15 & 13\\
+% %         Sun & 20 & 13
+% %        \end{tabular}
+% %        \caption{First Week}
+% %        \label{tab:week1}
+% %     \end{subtable}
+% %     \hfill
+% %     \begin{subtable}[h]{0.45\textwidth}
+% %         \centering
+% %         \begin{tabular}{l | l | l}
+% %         Day & Max Temp & Min Temp \\
+% %         \hline \hline
+% %         Mon & 17 & 11\\
+% %         Tue & 16 & 10\\
+% %         Wed & 14 & 8\\
+% %         Thurs & 12 & 5\\
+% %         Fri & 15 & 7\\
+% %         Sat & 16 & 12\\
+% %         Sun & 15 & 9
+% %         \end{tabular}
+% %         \caption{Second Week}
+% %         \label{tab:week2}
+% %      \end{subtable}
+% %      \caption{Max and min temps recorded in the first two weeks of July}
+% %      \label{tab:temps}
+% % \end{table}
